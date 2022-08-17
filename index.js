@@ -1,4 +1,4 @@
-console.log((+ 'a' + 'a' + +'a' + 'a' + + +'a' + 'a' + + 'a' + 'a' + + 'a' + 'a' + + 'a' + 'a' + + 'a' + 'a' + + 'a' + 'a' + + ('a' + + 'a').slice(0, -2)));
+console.log(('\n' + 'Start '.repeat(11) + '\n'));
 
 //Write a function filterRange(arr, a, b) that gets an array arr, looks for elements with values higher or equal to a and lower or equal to b and return a result as an array.
 //1
@@ -18,16 +18,11 @@ console.log(arr); // 5,3,8,1 (not modified)
 function filterRangeInPlace(arr, a, b) {
     filtered = arr.filter(item => item >= a && item <= b);
     arr.length = 0;
-    for (item of filtered) {
-        arr.push(item);
-    }
+    arr.push(...filtered);
 }
 
 let array = [5, 3, 8, 1];
-
 filterRangeInPlace(array, 1, 4); // removed the numbers except from 1 to 4
-
 console.log(array); // [3, 1]
 
-
-console.log(('End' + + 'a' + 'a' + +'a' + 'a' + + +'a' + 'a' + + 'a' + 'a' + + 'a' + 'a' + + 'a' + 'a' + + 'a' + 'a' + + 'a' + 'a' + + ('a' + + 'a').slice(0, -2)));
+console.log(('\n' + 'End '.repeat(19) + '\n'));
